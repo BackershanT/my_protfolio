@@ -17,6 +17,7 @@ class HomePages extends StatelessWidget {
   final scrollController = ScrollController();
   final List<GlobalKey> navbarKeys = List.generate(4, (index) => GlobalKey());
 
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -87,7 +88,7 @@ class HomePages extends StatelessWidget {
                         else
                           const SkillsMobile(),
                         const SizedBox(
-                          height: 40,
+                          height: 50,
                         ),
                         //projects
 

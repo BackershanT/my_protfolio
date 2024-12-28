@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_protfolio/src/constants/colors.dart';
 
 class SiteLogo extends StatelessWidget {
   const SiteLogo({super.key,this.onTap});

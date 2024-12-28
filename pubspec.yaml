@@ -62,6 +62,15 @@ flutter:
   assets:
     - assets/
     - assets/projects/
+    - assets/projects/hobby_project/
+    - assets/projects/work_project/
+    - assets/skills/
+    - assets/skills/flutter/
+    - assets/skills/html/
+    - assets/skills/react/
+    - assets/skills/python/
+    - assets/skills/design/
+    - assets/skills/platform/
 #     - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

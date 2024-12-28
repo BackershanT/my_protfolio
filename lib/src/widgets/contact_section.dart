@@ -81,8 +81,8 @@ class ContactSection extends StatelessWidget {
           child: SizedBox(
               width: double.maxFinite,
               child: ElevatedButton(
-                onPressed: () {},
-                child: const Text('Get in Touch'),
+                onPressed: () =>_showErrorMessage(context),
+                child: const Text('Submit'),
               )),
         ),
         const SizedBox(
@@ -131,5 +131,14 @@ class ContactSection extends StatelessWidget {
 
 
   }
-
+  void _showErrorMessage(BuildContext context) {
+    // Display a Snackbar with an error message
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('An error occurred! Please try again.'),
+        backgroundColor: CustomColor.txtFieldBg,
+        duration: Duration(seconds: 3),
+      ),
+    );
+  }
 }

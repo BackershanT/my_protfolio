@@ -47,9 +47,19 @@ class MainMobile extends StatelessWidget {
           SizedBox(
             width: 180,
             child:
-                ElevatedButton(onPressed: () {}, child: const Text('Get in Touch')),
+                ElevatedButton(onPressed: () =>_showErrorMessage(context), child: const Text('Get in Touch')),
           )
         ],
+      ),
+    );
+  }
+  void _showErrorMessage(BuildContext context) {
+    // Display a Snackbar with an error message
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('An error occurred! Please try again.'),
+        backgroundColor: CustomColor.txtFieldBg,
+        duration: Duration(seconds: 3),
       ),
     );
   }

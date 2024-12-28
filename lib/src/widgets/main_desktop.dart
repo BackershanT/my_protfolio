@@ -10,6 +10,7 @@ class MainDesktop extends StatelessWidget {
     final screenWidth = screenSize.width;
     final screenHeight= screenSize.height;
 
+
     return    Container(
         margin: EdgeInsets.symmetric(horizontal: 20),
         height: screenHeight / 1.2,
@@ -21,7 +22,7 @@ class MainDesktop extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Hi\nI'm BackerShan\nFlutter Dev",
+                  "Hi\nI'm BackerShan\nFront End Developer",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
@@ -32,7 +33,7 @@ class MainDesktop extends StatelessWidget {
                 SizedBox(
                   width: 250,
                   child: ElevatedButton(
-                      onPressed: () {}, child: Text('Get in Touch')) ,
+                      onPressed: () =>_showErrorMessage(context), child: Text('Get in Touch')) ,
                 )
 
               ],
@@ -41,4 +42,15 @@ class MainDesktop extends StatelessWidget {
           ],
         ));
   }
+
+   void _showErrorMessage(BuildContext context) {
+     // Display a Snackbar with an error message
+     ScaffoldMessenger.of(context).showSnackBar(
+       SnackBar(
+         content: Text('An error occurred! Please try again.'),
+         backgroundColor: CustomColor.txtFieldBg,
+         duration: Duration(seconds: 3),
+       ),
+     );
+   }
 }
