@@ -19,6 +19,7 @@ class ProjectUtils {
 }
 
 List<ProjectUtils> hobbyProjectUtils = [
+  
   ProjectUtils(
       image: ('assets/projects/hobby_project/quran.png'),
       title: 'Quran App',

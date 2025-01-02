@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/src/constants/colors.dart';
+import 'package:seo/seo.dart';
 
 class MainMobile extends StatelessWidget {
   const MainMobile({super.key});
@@ -33,14 +34,15 @@ class MainMobile extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30,),
-          const Text(
+            Seo.text(text: 'Backershan T''Shan''Backershan''flutter Dev''flutter project''FlutterBloc''flutter projects''flutter task''flutter seo',
+          child: Text(
             "Hi\nI'm BackerShan\nFlutter Dev",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
                 height: 1.5,
                 color: CustomColor.whitePrimary),
-          ),
+          ),),
           const SizedBox(
             height: 15,
           ),

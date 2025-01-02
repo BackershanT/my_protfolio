@@ -10,14 +10,14 @@ List<Map> skillItems = [
   {"img": "assets/skills/flutter/dart.png", "title": "Dart "},
   {"img": "assets/skills/flutter/bloc.png", "title": "Bloc "},
 
-  {"img": "assets/skills/react/react.png", "title": "React "},
-  {"img": "assets/skills/react/redux.png", "title": "Redux "},
+ // {"img": "assets/skills/react/react.png", "title": "React "},
+  //{"img": "assets/skills/react/redux.png", "title": "Redux "},
 
   {"img": "assets/skills/html/html.png", "title": "HTML 5"},
   {"img": "assets/skills/html/css.png", "title": "css "},
 
-  {"img": "assets/skills/python/python.png", "title": "Python "},
-  {"img": "assets/skills/python/django.png", "title": "Django "},
+ // {"img": "assets/skills/python/python.png", "title": "Python "},
+//  {"img": "assets/skills/python/django.png", "title": "Django "},
 
 
 
@@ -25,6 +25,6 @@ List<Map> skillItems = [
   {"img": "assets/skills/design/figma.png", "title": "Figma "},
   {"img": "assets/skills/design/adobexd.png", "title": "Adobe XD "},
 
-  {"img": "assets/skills/flutter/firebase.png", "title": "Firebase "},
+ {"img": "assets/skills/flutter/firebase.png", "title": "Firebase "},
 
 ];

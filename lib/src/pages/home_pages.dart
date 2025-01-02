@@ -60,7 +60,7 @@ class HomePages extends StatelessWidget {
                     },
                   ),
                 if (constraints.maxWidth >= kMinDeskWidth)
-                  MainDesktop()
+                  MainDesktop(text: 'Backershan T',)
                 else
                   const MainMobile(),
                 //skills

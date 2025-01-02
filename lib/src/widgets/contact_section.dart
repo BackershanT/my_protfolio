@@ -3,6 +3,8 @@ import 'package:my_protfolio/src/constants/colors.dart';
 import 'package:my_protfolio/src/constants/links.dart';
 import 'package:my_protfolio/src/widgets/text_field.dart';
 import 'dart:js'as js;
+
+import 'package:seo/seo.dart';
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
 
@@ -102,6 +104,12 @@ class ContactSection extends StatelessWidget {
           runSpacing: 10,
           alignment: WrapAlignment.center,
           children: [
+            Seo.link(
+              href: 'https://github.com/BackershanT',
+            anchor: 'Backershan',
+            rel: 'Backershan',
+
+            child:
             InkWell(
               onTap: () {
                 js.context.callMethod("open",[SnsLinks.gitHub]);
@@ -112,8 +120,11 @@ class ContactSection extends StatelessWidget {
                 width: 28,
                 height: 28,
               ),
-            ),
-            InkWell(
+            ),),
+            Seo.link(
+              href: 'https://www.linkedin.com/in/backershan-t-166aa078/',
+              anchor: 'Backershan',
+            child:InkWell(
               onTap: () {
                 js.context.callMethod("open",[SnsLinks.linkedIn]);
               },
@@ -122,7 +133,20 @@ class ContactSection extends StatelessWidget {
                 width: 28,
                 height: 28,
               ),
-            )
+            )),
+            Seo.link(
+              href: 'https://www.instagram.com/_backershan_/',
+              anchor: 'Backershan',
+            child:InkWell(
+              onTap: () {
+                js.context.callMethod("open",[SnsLinks.instagram]);
+              },
+              child: Image.asset(
+                'assets/insta.png',
+                width: 28,
+                height: 28,
+              ),
+            )),
           ],
         )
       ],

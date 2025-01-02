@@ -20,7 +20,12 @@ class HeaderDesktop extends StatelessWidget {
       child: Row(
         children: [
           SiteLogo(
-            onTap: () {},
+            onTap: () {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => Seo()),
+              // );
+            },
           ),
           const Spacer(),
           for (int i = 0; i < navTitles.length; i++)
