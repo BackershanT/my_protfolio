@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
   seo: ^0.0.9
+  path_provider: ^2.1.5
+  permission_handler: ^11.3.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -72,6 +74,7 @@ flutter:
     - assets/skills/python/
     - assets/skills/design/
     - assets/skills/platform/
+    - assets/resume/
 #     - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

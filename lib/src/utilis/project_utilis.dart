@@ -19,16 +19,23 @@ class ProjectUtils {
 }
 
 List<ProjectUtils> hobbyProjectUtils = [
+  ProjectUtils(
+
+
+      image: ('assets/projects/hobby_project/mimo_logo.png'),
+      title: 'Todo App',
+      subtitle: 'Todo App | Api integration using Bloc | Firebase | CloudStore | etc...',
+      gitLink: "https://github.com/BackershanT/d_fine.git"),
   
   ProjectUtils(
       image: ('assets/projects/hobby_project/quran.png'),
       title: 'Quran App',
-      subtitle: 'Quran App |Api integration using Bloc|etc...',
+      subtitle: 'Quran App | Api integration using Bloc | etc...',
       gitLink: "https://github.com/BackershanT/quran"),
   ProjectUtils(
       image: ('assets/projects/hobby_project/movie_logo.png'),
       title: 'Movie App',
-      subtitle: 'Movie App |Api integration using Bloc|BorderedText |etc...',
+      subtitle: 'Movie App | Api integration using Bloc | BorderedText | etc...',
       gitLink: "https://github.com/BackershanT/movie_app"),
   ProjectUtils(
       image: ('assets/projects/hobby_project/dietsoure.png'),

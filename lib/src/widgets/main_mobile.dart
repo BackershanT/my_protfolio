@@ -1,8 +1,16 @@
+// import 'dart:nativewrappers/_internal/vm/lib/ffi_native_type_patch.dart';
+
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/src/constants/colors.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:seo/seo.dart';
+import 'dart:io';
+import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
 
 class MainMobile extends StatelessWidget {
+  final String assetPath = 'assets/resume/my_resume.pdf';
+
   const MainMobile({super.key});
 
   @override
@@ -49,12 +57,46 @@ class MainMobile extends StatelessWidget {
           SizedBox(
             width: 180,
             child:
-                ElevatedButton(onPressed: () =>_showErrorMessage(context), child: const Text('Get in Touch')),
+                ElevatedButton(onPressed: () =>
+                // =>downloadPDF(context ,assetPath),
+
+                    _showErrorMessage(context),
+    child: const Text('Get in Touch')),
           )
         ],
       ),
     );
   }
+  // Future<Void> downloadPDF (BuildContext context,String assetPath)async{
+  //   try{
+  //     if(await Permission.storage.request().isGranted){
+  //       final byteData = await rootBundle.load(assetPath);
+  //
+  //       final directory =await getExternalStorageDirectory();
+  //       final downloadsPath = directory?.path;
+  //       if(downloadsPath != null){
+  //         final filePath ="$downloadsPath/my_resume.pdf";
+  //         final file = File(filePath);
+  //         await file.writeAsBytes(byteData.buffer.asUint8List());
+  //
+  //         ScaffoldMessenger.of(context).showSnackBar(
+  //           SnackBar(content: Text("PDF saved to: $filePath")),
+  //         );
+  //       } else {
+  //         throw Exception("Could not access downloads directory.");
+  //       }
+  //     }
+  //     else {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(content: Text("Storage permission denied")),
+  //       );
+  //     }
+  //   } catch (e) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text("Error: $e")),
+  //     );
+  //   }
+  // }
   void _showErrorMessage(BuildContext context) {
     // Display a Snackbar with an error message
     ScaffoldMessenger.of(context).showSnackBar(
