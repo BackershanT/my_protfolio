@@ -92,7 +92,8 @@ class HomePages extends StatelessWidget {
                         ),
                         //projects
 
-                        ProjectDesktop(key: navbarKeys[2]),
+                        ProjectDesktop(key:
+                         navbarKeys[2]),
 
                         ContactSection(key: navbarKeys[3]),
 

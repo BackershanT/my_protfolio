@@ -1,5 +1,8 @@
 
 
+import 'dart:io';
+import 'dart:html' as html;
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_protfolio/src/constants/colors.dart';
@@ -46,8 +49,9 @@ class MainDesktop extends StatelessWidget {
                   width: 250,
                   child: ElevatedButton(
                       onPressed: () =>
-                          // downloadPDF(context ,assetPath),
-                          _showErrorMessage(context),
+
+                      downloadPDF(context ,assetPath),
+                          // _showErrorMessage(context),
                       child: Text('Get in Touch')),
                 )
               ],
@@ -56,6 +60,99 @@ class MainDesktop extends StatelessWidget {
           ],
         ));
   }
+
+  Future<void> downloadPDF(BuildContext context, String assetPath) async {
+    try {
+      if (kIsWeb) {
+        // Web-specific logic
+        final byteData = await rootBundle.load(assetPath);
+        final blob = html.Blob([byteData.buffer.asUint8List()]);
+        final url = html.Url.createObjectUrlFromBlob(blob);
+
+        // Trigger browser download
+        final anchor = html.AnchorElement(href: url)
+          ..target = 'blank'
+          ..download = 'my_resume.pdf'
+          ..click();
+
+        // Clean up
+        html.Url.revokeObjectUrl(url);
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("PDF downloaded")),
+        );
+      } else {
+        // Mobile-specific logic
+        if (await Permission.storage.request().isGranted) {
+          final byteData = await rootBundle.load(assetPath);
+          final directory = await getExternalStorageDirectory();
+          if (directory?.path != null) {
+            final filePath = "${directory!.path}/my_resume.pdf";
+            final file = File(filePath);
+
+            await file.writeAsBytes(byteData.buffer.asUint8List());
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text("PDF saved to: $filePath")),
+            );
+          } else {
+            throw Exception("Could not access downloads directory.");
+          }
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("Storage permission denied")),
+          );
+        }
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Error: $e")),
+      );
+    }
+  }
+
+  // Future<void> downloadPDF(BuildContext context, String assetPath) async {
+  //   try {
+  //     // Request storage permission
+  //     final permissionStatus = await Permission.storage.request();
+  //     if (permissionStatus.isGranted) {
+  //       // Load the PDF file from assets
+  //       final byteData = await rootBundle.load(assetPath);
+  //
+  //       // Get external storage directory
+  //       final directory = await getExternalStorageDirectory();
+  //       if (directory?.path != null) {
+  //         final downloadsPath = directory!.path;
+  //         final filePath = "$downloadsPath/my_resume.pdf";
+  //         final file = File(filePath);
+  //
+  //         // Write the file
+  //         await file.writeAsBytes(byteData.buffer.asUint8List());
+  //
+  //         // Notify user of success
+  //         ScaffoldMessenger.of(context).showSnackBar(
+  //           SnackBar(content: Text("PDF saved to: $filePath")),
+  //         );
+  //       } else {
+  //         throw Exception("Could not access downloads directory.");
+  //       }
+  //     } else if (permissionStatus.isPermanentlyDenied) {
+  //       // Guide the user to app settings for permission
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(content: Text("Storage permission permanently denied. Enable it in app settings.")),
+  //       );
+  //     } else {
+  //       // Permission denied
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(content: Text("Storage permission denied")),
+  //       );
+  //     }
+  //   } catch (e) {
+  //     // Handle errors
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text("Error: $e")),
+  //     );
+  //   }
+  // }
 
   // Future<Void> downloadPDF (BuildContext context,String assetPath)async{
   //   try{

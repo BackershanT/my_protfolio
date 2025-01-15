@@ -134,19 +134,19 @@ class ContactSection extends StatelessWidget {
                 height: 28,
               ),
             )),
-            Seo.link(
-              href: 'https://www.instagram.com/_backershan_/',
-              anchor: 'Backershan',
-            child:InkWell(
-              onTap: () {
-                js.context.callMethod("open",[SnsLinks.instagram]);
-              },
-              child: Image.asset(
-                'assets/insta.png',
-                width: 28,
-                height: 28,
-              ),
-            )),
+            // Seo.link(
+            //   href: 'https://www.instagram.com/_backershan_/',
+            //   anchor: 'Backershan',
+            // child:InkWell(
+            //   onTap: () {
+            //     js.context.callMethod("open",[SnsLinks.instagram]);
+            //   },
+            //   child: Image.asset(
+            //     'assets/insta.png',
+            //     width: 28,
+            //     height: 28,
+            //   ),
+            // )),
           ],
         )
       ],
