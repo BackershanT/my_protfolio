@@ -20,8 +20,18 @@ class ProjectUtils {
 
 List<ProjectUtils> hobbyProjectUtils = [
   ProjectUtils(
+      image: ('assets/projects/hobby_project/aapk.png'),
+      title: 'e-Commerce Setup',
+      subtitle: 'Front end UI || etc...',
+      gitLink: "https://github.com/BackershanT/ecommerce_setup.git"),
 
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/bytes_app_logo.png'),
+      title: 'Grocery App Ui',
+      subtitle: 'Todo App | Api integration using FreezedBloc || etc...',
+      gitLink: "https://github.com/BackershanT/bytes_task.git"),
 
+  ProjectUtils(
       image: ('assets/projects/hobby_project/mimo_logo.png'),
       title: 'Todo App',
       subtitle: 'Todo App | Api integration using Bloc | Firebase | CloudStore | etc...',
@@ -32,51 +42,61 @@ List<ProjectUtils> hobbyProjectUtils = [
       title: 'Quran App',
       subtitle: 'Quran App | Api integration using Bloc | etc...',
       gitLink: "https://github.com/BackershanT/quran"),
+
   ProjectUtils(
       image: ('assets/projects/hobby_project/movie_logo.png'),
       title: 'Movie App',
       subtitle: 'Movie App | Api integration using Bloc | BorderedText | etc...',
       gitLink: "https://github.com/BackershanT/movie_app"),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/dietsoure.png'),
-  //     title: 'Dietosure',
-  //     subtitle: '',
-  //     gitLink: ""),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/noviindus.png'),
-  //     title: 'Noviindus',
-  //     subtitle: '',
-  //     gitLink: ""),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/thought.png'),
-  //     title: 'Thought Box',
-  //     subtitle: '',
-  //     gitLink: ""),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/mypcot.png'),
-  //     title: 'Mypcot',
-  //     subtitle: '',
-  //     gitLink: ""),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/aapk.png'),
-  //     title: 'PineTech',
-  //     subtitle: '',
-  //     gitLink: ""),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/aapk.png'),
-  //     title: 'Weather App',
-  //     subtitle: 'Weather showing Application',
-  //     gitLink: ""),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/aapk.png'),
-  //     title: 'My Expense Tracker',
-  //     subtitle: '',
-  //     gitLink: ""),
-  // ProjectUtils(
-  //     image: ('assets/projects/hobby_project/aapk.png'),
-  //     title: 'Track One',
-  //     subtitle: '',
-  //     gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/dietsoure.png'),
+      title: 'Dietosure',
+      subtitle: '',
+      gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/noviindus.png'),
+      title: 'Noviindus',
+      subtitle: '',
+      gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/thought.png'),
+      title: 'Thought Box',
+      subtitle: '',
+      gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/mypcot.png'),
+      title: 'Mypcot',
+      subtitle: '',
+      gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/aapk.png'),
+      title: 'PineTech',
+      subtitle: '',
+      gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/aapk.png'),
+      title: 'Weather App',
+      subtitle: 'Weather showing Application',
+      gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/aapk.png'),
+      title: 'My Expense Tracker',
+      subtitle: '',
+      gitLink: ""),
+
+  ProjectUtils(
+      image: ('assets/projects/hobby_project/aapk.png'),
+      title: 'Track One',
+      subtitle: '',
+      gitLink: ""),
+
   ProjectUtils(
       image: ('assets/projects/hobby_project/aapk.png'),
       title: 'Calculator',
