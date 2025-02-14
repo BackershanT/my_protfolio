@@ -17,12 +17,12 @@ class ProjectDesktop extends StatelessWidget {
       Container(
 color: CustomColor.ScaffoldBg,
       width: screenWidth,
-      padding:  EdgeInsets.fromLTRB(25, 20, 25, 60),
+      padding:  const EdgeInsets.fromLTRB(25, 20, 25, 60),
       child: Column(
         children: [
           Seo.text(text: 'Flutter Project''FlutterBloc''flutter projects''flutter task''flutter seo',
             child:
-           Text(
+           const Text(
             'Work Project',
             style: TextStyle(
               fontWeight: FontWeight.bold,

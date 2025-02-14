@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/src/pages/home_pages.dart';
 import 'package:my_protfolio/src/utilis/galleryUtils.dart';
-import 'package:my_protfolio/src/utilis/project_utilis.dart';
 import 'package:seo/html/seo_controller.dart';
 import 'package:seo/seo.dart';
 

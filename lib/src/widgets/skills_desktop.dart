@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/src/constants/colors.dart';
 import 'package:my_protfolio/src/constants/skill_items.dart';
@@ -36,7 +35,7 @@ class SkillsDesktop extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ConstrainedBox(
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   maxWidth: 450,
                 ),
                 child: Wrap(
@@ -50,7 +49,7 @@ class SkillsDesktop extends StatelessWidget {
                             color: CustomColor.bgLight2,
                             borderRadius: BorderRadius.circular(5)),
                         child: ListTile(
-                          contentPadding: EdgeInsets.symmetric(
+                          contentPadding: const EdgeInsets.symmetric(
                               horizontal: 20, vertical: 10),
                           leading: Image.asset(
                             platformItems[i]["img"],
@@ -62,12 +61,12 @@ class SkillsDesktop extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 50,
               ),
               Flexible(
                   child: ConstrainedBox(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: 500,
                       ),
                       child: Wrap(
@@ -77,7 +76,7 @@ class SkillsDesktop extends StatelessWidget {
                           for (int i = 0; i < skillItems.length; i++)
                             Chip(
 
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                 vertical: 12,
                                 horizontal: 16,
                               ),

@@ -21,7 +21,7 @@ class MainMobile extends StatelessWidget {
     final screenHeight = screenSize.height;
 
     return Container(
-      margin: EdgeInsets.symmetric(horizontal:40,vertical:30 ),
+      margin: const EdgeInsets.symmetric(horizontal:40,vertical:30 ),
       height: screenHeight/2,
       constraints: const BoxConstraints(minHeight: 560),
       child: Column(
@@ -42,9 +42,9 @@ class MainMobile extends StatelessWidget {
               width: screenWidth,
             ),
           ),
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
             Seo.text(text: 'Backershan T''Shan''Backershan''flutter Dev''flutter project''FlutterBloc''flutter projects''flutter task''flutter seo',
-          child: Text(
+          child: const Text(
             "Hi\nI'm BackerShan\nFlutter Dev",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -122,7 +122,7 @@ class MainMobile extends StatelessWidget {
   void _showErrorMessage(BuildContext context) {
     // Display a Snackbar with an error message
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+      const SnackBar(
         content: Text('An error occurred! Please try again.'),
         backgroundColor: CustomColor.txtFieldBg,
         duration: Duration(seconds: 3),
