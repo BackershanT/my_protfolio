@@ -22,7 +22,6 @@ class HomePages extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
-    final screenHeight = screenSize.height;
 
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(

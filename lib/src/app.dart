@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:my_protfolio/src/pages/home_pages.dart';
 import 'package:my_protfolio/src/utilis/galleryUtils.dart';
@@ -9,7 +10,6 @@ import 'pages/gallery.dart';
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return SeoController(
@@ -26,7 +26,12 @@ class MyApp extends StatelessWidget {
 
       },
 
+      // home: HomePages(),
       home: HomePages(),
+          navigatorObservers: [
+            FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance)
+          ],
     ));
   }
 }
+

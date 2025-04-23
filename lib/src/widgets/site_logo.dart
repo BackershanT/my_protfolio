@@ -10,7 +10,7 @@ final VoidCallback? onTap;
       uri: Uri.parse('/gallery'),
       builder: (context,followLink)=>
           InkWell(
-      onTap:followLink,
+      // onTap:followLink,
       child:         Image.asset('assets/logo.png')
       // const Text(
       //   "SHAN",

@@ -33,9 +33,9 @@ class Gallery extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.transparent,
                         image: DecorationImage(
-                            image: AssetImage(artsGalleryUtils[index].image),
+                            image: AssetImage(photosGalleryUtils[index].image),
                             fit: BoxFit.fill)),
-                  ),childCount:artsGalleryUtils.length,
+                  ),childCount:photosGalleryUtils.length,
               // Tile(index: index),
               ),
     )));
