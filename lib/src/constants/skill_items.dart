@@ -2,11 +2,12 @@ const List<Map> platformItems = [
   {"img": "assets/skills/platform/android.png", "title": "Android Dev"},
   {"img": "assets/skills/platform/ios.png", "title": "IOS Dev"},
   {"img": "assets/skills/platform/web.png", "title": "Web Dev"},
-  {"img": "assets/skills/platform/desktop.png", "title": "DeskTop Dev"},
+  // {"img": "assets/skills/platform/desktop.png", "title": "DeskTop Dev"},
   {"img": "assets/skills/platform/game.png", "title": "Game"},
-  // {"img": "assets/skills/platform/windows.png", "title": "Windows"},
-  // {"img": "assets/skills/platform/mac_os.png", "title": "Mac Os"},
-  // {"img": "assets/skills/platform/linux.png", "title": "Linux"},
+  // {"img": "assets/skills/platform/game.png", "title": "Cyber Security"},
+  {"img": "assets/skills/platform/windows.png", "title": "Windows"},
+  {"img": "assets/skills/platform/mac_os.png", "title": "Mac Os"},
+  {"img": "assets/skills/platform/linux.png", "title": "Linux"},
 ];
 
 List<Map> skillItems = [
@@ -22,8 +23,8 @@ List<Map> skillItems = [
   {"img": "assets/skills/html/html.png", "title": "HTML 5"},
   {"img": "assets/skills/html/css.png", "title": "css "},
 
- // {"img": "assets/skills/python/python.png", "title": "Python "},
- // {"img": "assets/skills/python/django.png", "title": "Django "},
+ {"img": "assets/skills/python/python.png", "title": "Python "},
+ {"img": "assets/skills/python/django.png", "title": "Django "},
 
 
 
