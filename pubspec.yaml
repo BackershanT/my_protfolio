@@ -72,6 +72,7 @@ flutter:
     - assets/projects/
     - assets/projects/hobby_project/
     - assets/projects/work_project/
+    - assets/projects/work_project/react/
     - assets/skills/
     - assets/skills/flutter/
     - assets/skills/html/

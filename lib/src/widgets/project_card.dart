@@ -19,6 +19,17 @@ class ProjectCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
+          Row(
+           mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),child:
+              CircleAvatar(radius: 10,
+                backgroundImage: AssetImage(project.project_language),
+                backgroundColor: Colors.transparent,
+              ),)
+
+            ],
+          ),
           const Spacer(),
           Image.asset(
             project.image,
@@ -41,8 +52,11 @@ class ProjectCard extends StatelessWidget {
               child: Text(
                 project.subtitle,
                 style: const TextStyle(
+
                   fontSize: 12,
+
                   fontWeight: FontWeight.w400,
+                  overflow:TextOverflow.ellipsis ,
                   color: CustomColor.whiteSecondary,
                 ),
               )),
@@ -100,6 +114,21 @@ class ProjectCard extends StatelessWidget {
                       ),
                     ),
                   ),
+                if(project.webLink != null)
+                  InkWell(
+                    onTap: () {
+                      js.context.callMethod("open", [project.webLink]);
+
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 6),
+                      child: Image.asset(
+                        'assets/skills/platform/web.png',
+                        width: 17,
+                      ),
+                    ),
+                  ),
+
               ],
             ),
           )
