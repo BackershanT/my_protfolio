@@ -188,6 +188,36 @@ class _ContactSectionState extends State<ContactSection> {
                                 height: 28,
                               ),
                             )),
+                        Seo.link(
+                            href:
+                                'https://www.facebook.com/profile.php?id=61576114507530',
+                            anchor: 'Backershan T',
+                            child: InkWell(
+                              onTap: () {
+                                js.context
+                                    .callMethod("open", [SnsLinks.facebook]);
+                              },
+                              child: Image.asset(
+                                'assets/facebook.png',
+                                width: 28,
+                                height: 28,
+                              ),
+                            )),
+                        Seo.link(
+                            href:
+                                'https://www.instagram.com/backershan.t.2025/',
+                            anchor: 'Backershan T',
+                            child: InkWell(
+                              onTap: () {
+                                js.context
+                                    .callMethod("open", [SnsLinks.instagram]);
+                              },
+                              child: Image.asset(
+                                'assets/insta.png',
+                                width: 28,
+                                height: 28,
+                              ),
+                            )),
                         // ElevatedButton(onPressed: ()async{
                         //   await FirebaseAnalytics.instance.logEvent(name: "slick_analytics");
                         // }, child: Text('Analytics'))
