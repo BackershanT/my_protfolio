@@ -78,6 +78,7 @@ flutter:
     - assets/skills/html/
     - assets/skills/react/
     - assets/skills/python/
+    - assets/skills/mern/
     - assets/skills/design/
     - assets/skills/platform/
     - assets/resume/
