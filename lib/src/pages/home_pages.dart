@@ -17,7 +17,6 @@ class HomePages extends StatelessWidget {
   final scrollController = ScrollController();
   final List<GlobalKey> navbarKeys = List.generate(4, (index) => GlobalKey());
 
-
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -59,7 +58,9 @@ class HomePages extends StatelessWidget {
                     },
                   ),
                 if (constraints.maxWidth >= kMinDeskWidth)
-                  MainDesktop(text: 'Backershan T',)
+                  MainDesktop(
+                    text: 'Backershan T',
+                  )
                 else
                   const MainMobile(),
                 //skills
@@ -91,8 +92,7 @@ class HomePages extends StatelessWidget {
                         ),
                         //projects
 
-                        ProjectDesktop(key:
-                         navbarKeys[2]),
+                        ProjectDesktop(key: navbarKeys[2]),
 
                         ContactSection(key: navbarKeys[3]),
 
